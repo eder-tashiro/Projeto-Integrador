@@ -1,0 +1,586 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    
+    background: fixed linear-gradient(170deg,#002b5b 20%,#159895);
+    z-index: 1;
+    overflow-x: hidden;
+    
+  }
+  
+.background
+{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: url(background.png);
+}
+
+  
+
+
+
+#meuCheckbox {
+    display: none;   
+}
+
+#header {
+    background-color: #3f3f3f;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    transition: height 0.5s, opacity .5s; }
+  
+  
+  #meuCheckbox:checked ~ #header {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    background-color: #2f2f2f;
+    opacity: 1; 
+    z-index: 80;
+  }
+#meuCheckbox:not(:checked) ~ #header {
+    position: fixed;
+    height: 0;
+    width: 100%;
+    background-color: #2f2f2f;
+    opacity: 1; 
+    z-index: 81;
+}
+#meuCheckbox:checked ~ .textbusca{
+    position: fixed;
+    top: 0;
+    left: 300px;
+    height: 30px;
+    width: 300px;
+    z-index: 90;
+    transition: .5s;
+}
+#meuCheckbox:not(:checked)~ .textbusca{
+    display: none;
+}
+
+
+
+#meuCheckbox:not(:checked)~.btnhome{background:none;}
+#meuCheckbox:not(:checked)~.btnhome:hover{background:#159895;transition: .5s;cursor:pointer;}
+
+  .btnhome{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color:#159895;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%; /* Define a forma circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    z-index: 999;
+    transition: .5s;
+  }
+  .btnhome i 
+  {
+    margin: auto;
+  }
+  .btnhome:hover
+  {
+    cursor:pointer;
+  }
+
+  
+.circuito{
+    position: relative;
+    background-image: url(background1.png);
+    width: 100%;
+    height: 100%;
+   border-bottom: 2px solid black;
+}
+.logo
+{
+    border-right: #2f2f2f solid 2px;
+    background-color:white;
+    background-size: 100%;
+    position: relative;
+    padding: 0px 50px 0 50px; 
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: auto;
+}
+.menu{
+    position: absolute;
+    bottom: 10px;
+    left:150px;
+    
+}
+
+nav ul li  {
+    display: inline;
+    align-items: left;
+}
+nav ul li a{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    padding:  0 20px;
+    margin-left: 35px;
+    text-decoration: none;
+    color:#2c7da0;
+    
+}
+/*Conteúdo do site*/
+h1,h2,h3
+{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 600;
+}
+
+h1
+{
+    position: relative;
+    text-align: center;
+    color: #CCCCCC;
+    font-size: 50px;
+    margin: auto;
+    padding: 50px 0;
+    width: 100%;
+   background:#2f2f2f  ;
+    transition: .5s;
+}
+#meuCheckbox:checked ~ h1{
+    padding-top: 100px;
+}
+h2
+{   
+    font-size: 40px;
+    color:#ADD8E6;
+    margin: auto;
+    width: 100%;
+    text-decoration: underline #ADD8E6;
+}
+p,li
+{
+    width: 60%;
+    text-align: justify;
+    margin: auto;
+}
+
+
+section{
+    position: relative;
+    background:#2f2f2f ;
+    margin: 100px auto;
+    padding-bottom: 50px;
+}
+.Arduino div{
+    display: flex;
+}
+section h2
+{
+    padding-top: 40px;
+    width:auto ;
+    text-align: justify;
+    margin:50px 10%;
+    font-size: 30px;
+
+}
+
+.alimentador_img 
+{
+    margin: 50px 10%; 
+    display: flex;
+}
+.alimentador img
+{
+    margin: 0 10px 0 0;
+    border: solid white ;
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+p
+{
+    margin: 15px 0;
+}
+.alimentador p
+{
+    font-weight: 700;
+    font-size: 20px;
+    position: relative;
+    margin: 0  0 15px 0;
+    width: 100%;
+    color: #ffffcc;
+}
+section p{
+    font-weight: 700;
+    font-size: 20px;
+    position: relative;
+   
+    width: 100%;
+    color: #ffffcc;
+}
+.Funcionalidades p 
+{
+    position: relative;
+    max-width: 80% ;
+    margin-left: 10%;
+}
+
+.Funcionalidades h3
+{
+    padding: 5px;
+    width: fit-content;
+    position: relative;
+    font-size: 23px;
+    color: #FFA500;
+    left: 10%;
+    border: solid 3px white;
+    border-radius: 10px;
+}
+.Funcionalidades i 
+{
+    margin-right: 15px;
+}
+.Arduino img
+{
+    position: relative;
+    left:7%;
+    margin-right: 10px;
+}
+.Arduino div 
+{
+    position: relative;
+    width: 90%;
+}
+.Arduino p
+{
+    left: 8%;
+    position: relative;
+    width: 50%;
+}
+i
+{
+    margin-right: 15px;
+    color: white;
+}
+
+.microcontrolador 
+{
+    display: flex;
+}
+
+.tecnologia img 
+{
+    margin: 0 10px 0 0;
+    border: solid BLACK 5PX ;
+    position: relative;
+    width: 500px;
+    height: 300px;
+    left: 10%;
+}
+.tecnologia p
+{
+   width: 65%;
+   left: 20%;
+}
+.Beneficios p 
+{
+    left: 10%;
+    width: 70%;
+}
+.Beneficios li
+{
+    color: #FFA500;
+    font-weight: 800;
+    font-size: 18px;
+}
+.Como_funciona p
+{
+    left: 10%;
+    width: 80%;
+} 
+.comprar_agora{
+    margin-bottom: 0;
+}
+.comprar_agora p
+{
+    position: relative;
+    left: 10%;
+    width: 80%;
+}
+
+.btn_comprar_agora
+{
+    
+    width: min-content;
+    margin: auto;
+    padding: auto;
+    align-items: center;
+}
+.btn_comprar
+{
+    
+    position: relative;
+    height:80px;
+    width: 300px;
+    background-color: #ffffcc;
+    border-radius: 80px;
+    border: solid 3px #159895;
+    font-size: 18px;
+    padding: 7px;
+    text-align: initial ;
+    justify-content: center;
+    font-weight: 900;
+   
+}
+.btn_comprar
+{
+    box-shadow:  inset 0 0 9px 0px black;
+    transition: .1s ;
+}
+.btn_comprar:hover
+{
+    box-shadow: inset 0 0 20px 11px black;
+    transition: .1s ;
+}
+.btn_comprar:active
+{
+    box-shadow: inset 0 0 10px 11px green;
+    transition: .01s ;
+}
+.btn_comprar::after
+{
+    content: "";
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    background-color: #159895;
+    border: none;
+    border-radius: 50%;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(4px);
+    z-index: 400;
+    border: solid #3f3f3f 2px;
+}
+.comprar_agora i
+{
+    position: absolute;
+    left: 79%;
+    bottom: 20%;
+    font-size: 40px;
+    z-index: 401;
+    color: black;
+   
+}
+
+/*fim do conteúdo do site*/
+
+/*Footer*/
+/*Footer*/
+footer
+{
+    display: flex;
+    background: black;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    bottom: 0;
+}
+
+footer h3,p
+{
+    padding-top: 5px;
+    color: white;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.contact{
+    display:grid;
+}
+.contact input
+{
+    color: white;
+    margin-top:5px;
+    background:none ;
+}
+footer div 
+{
+    margin: auto;
+    height: 100%;
+    width: 20%;
+}
+.enviar
+{
+    width: 70px;
+    height: 30px;
+   
+}
+.digite
+{
+    height: 70px;
+}
+
+
+footer i 
+{
+    margin: 3px 10px;
+}
+.footer
+{
+    position: relative;
+    top: 0;
+    margin:0px 0 12px 5%;
+    
+}
+.footer p,li,ul{
+    position: relative;
+    width:100% ;
+    text-justify:auto;
+    color: white;
+}
+.Pages
+{
+    
+    margin-top: 12px;
+}
+a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+    cursor: pointer;
+}
+
+a::after{
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background: linear-gradient(112.9deg,#285df3 48.18%,#00c2ff 94.06%);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+
+}
+a:hover::after
+{
+    transform:scaleX(1);
+    transform-origin: bottom left;
+}
+
+.contact
+{
+    margin-top: 12px;
+}
+.btn_e
+{
+  position: fixed;
+  right: 20px;
+  z-index: 5000;
+  top: 50%;
+  transition:rigth .3s;
+}
+#btn_equipe:checked~.btn_e
+{
+    background-color: #159895;
+    transition: .3s;
+    border-radius: 10px;
+    padding: 15px;
+    top: 48%;
+    transition: .3s;
+}
+#btn_equipe:not(:checked)~.btn_e{
+    transition: .3s;
+}
+.btn_e:hover
+{
+    background-color: #159895;
+    transition: .3s;
+    border-radius: 10px;
+    padding: 15px;
+    top: 48%;
+}
+.btn_e:hover::after
+{
+    content: "Sobre a equipe";
+    color: white;
+    transition: .3s;
+}
+.equipe {
+    width: 0;
+    height:60%;
+    opacity: 0;
+    transition: height 0.5s, opacity .5s;
+    background: #195352;
+}
+  
+  
+#btn_equipe:checked~.equipe{
+    position: fixed;
+    height: 60%;
+    width:70%;
+    right: 15%;
+    top: 5%;
+    opacity: 1; 
+    z-index: 402;
+    border: solid #159895 5px;
+    overflow: scroll;
+    transition:ease .3s;
+  }
+#btn_equipe:not(:checked)~.equipe {
+    position: fixed;
+    height: 60%;
+    width: 0;
+    top: 5%;
+    opacity: .5; 
+    z-index: 403;
+    right: 0;
+    transition: ease-in-out .4s;
+    
+}
+.equipe h2,h3,h4
+{
+    position: relative;
+    margin: 10px 10%;
+    width: 80%;  
+}
+.equipe p
+{
+    width: 80%;
+    text-align: justify;
+    margin: 10px 10%;
+}
+.membro::after
+{
+    content: "";
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.membro h3
+{
+    border: solid #FFA500 3px;
+    padding: 5px;
+    width: fit-content;
+    border-radius: 15px;
+    color: #CCCCCC;
+    font-size: 22px;
+    font-weight: 300;
+}
+.equipe h4 
+{
+    font-size: 20px;
+    color: #ADD8E6;
+    text-decoration: underline overline
+    ;
+}
